@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latibule of the Heart</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("headerblack.html"); 
+        $("#footer").load("footer.html"); 
+        });
+    </script> 
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <div id = "header"></div>
+    <div class="container">
+        <div class="home">
+            <div class="backgroundcover"></div>
+            <img src="Assets/Images/Aboutus.jpg" class="parallax1" alt="Study1">
+            <div class="title">
+                <h1>About us</h1>
+                <p>Latibule of the Heart (LOTH)</p>
+            </div>
+        </div>
+
+        <div class="mission reveal">
+            <div class="title2">
+                <h1>Sứ mệnh</h1>
+                <p>LOTH ra đời với sứ mệnh giúp các bạn trẻ phát triển kĩ năng sống và vận dụng các kiến thức đã được học một cách thiết thực hơn trong cuộc sống.</p>
+            </div>
+            <div class="img_container">
+                <div class="deco"></div>
+                <img src="Assets/Images/Aboutus2.jpg" alt="Study2">
+            </div>
+        </div>
+        <div class="vision reveal">
+            <div class="title2">
+                <h1>Tầm nhìn</h1>
+                <p>Đến năm 2025, LOTH sẽ trở thành tổ chức giáo dục phi lợi nhuận được công nhận và đáng tin cậy tại Việt Nam.</p>
+            </div>
+            <div class="img_container">
+                <div class="deco"></div>
+                <img src="Assets/Images/Aboutus3.jpg" alt="Study3">
+            </div>
+        </div>
+        <div class="goal reveal">
+            <h1>Mục tiêu</h1>
+            <div class="goal_container">
+                <div class="sub_goal">
+                    <img src="Assets/Images/MoneyIcon.png" alt="Money">
+                    <h1>Tài chính</h1>
+                    <p>Các khoản tài chính từ nhà tài trợ và quỹ quyên góp được sử dụng hợp lý và hiệu quả để hỗ trợ dụng cụ và tư liệu cho các dự án của tổ chức.</p>
+                </div>
+                <div class="sub_goal">
+                    <img src="Assets/Images/WorkshopIcon.png" alt="Workshop">
+                    <h1>Sản phẩm</h1>
+                    <p>LOTH tổ chức các dự án giáo dục như workshop - webinar; các chương trình dạy học tình nguyện và các bài viết về kĩ năng sống.</p>
+                </div>
+                <div class="sub_goal">
+                    <img src="Assets/Images/TrustIcon.png" alt="Trust">
+                    <h1>Con người</h1>
+                    <p>Môi trường làm việc cởi mở và tôn trọng lẫn nhau; có cho bản thân những kiến thức, kinh nghiệm và trải nghiệm thú vị.</p>
+                </div>
+                <div class="sub_goal">
+                    <img src="Assets/Images/StudentIcon.png" alt="Student">
+                    <h1>Thị trường</h1>
+                    <p>Không chỉ học sinh trong một độ tuổi nhất định mà tất cả học sinh ở từng cấp sẽ có các khóa học phù hợp và các kĩ năng sống rất thiết thực.</p>
+                </div>
+            </div>
+            <div class="BtnContainer">
+                <a href="#"><button><span></span>Xem thêm</button></a>
+            </div>
+        </div>
+
+        <div class="value reveal">
+            <h1>Giá trị cốt lõi</h1>
+            <div class="value_container">
+                <div class="sub_value">
+                    <h1>Giá trị thực tiễn</h1>
+                    <p>Các bạn học sinh sẽ được khám phá cách vận dụng những kiến thức vào cuộc sống một các hiệu quả và phù hợp. </p>
+                </div>
+                <div class="sub_value">
+                    <h1>Giá trị bền vững</h1>
+                    <p>Các kiến thức và kĩ năng nhận được có giá trị sử dụng lâu dài.</p>
+                </div>
+                <div class="sub_value">
+                    <h1>Giá trị tích cực</h1>
+                    <p>Mang đến một góc nhìn cởi mở hơn, tích cực hơn về việc học thông quá các hoạt động truyền cảm hứng và tìm ra giá trị thật sự của việc học.</p>
+                </div>
+                <div class="sub_value">
+                    <h1>Giá trị kết nối</h1>
+                    <p>LOTH là chiếc cầu nối  các thế hệ đầy kinh nghiệm đi trước và những bạn học sinh có khao khát được học hỏi và đầy sức sáng tạo.</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="main.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+    
+        function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+    
+          for(var i = 0; i < reveals.length; i++){
+    
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+    
+            if(revealtop < windowheight - revealpoint){
+              reveals[i].classList.add('active');
+            }
+            else{
+              reveals[i].classList.remove('active');
+            }
+          }
+        }
+    </script>
+</body>
+</html>
