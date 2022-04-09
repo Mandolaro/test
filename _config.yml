@@ -2,8 +2,8 @@ title:              Blog
 email:              your-email@example.com
 description:        Here are our posts
 author:             The itHelp Project
-baseurl:            ""
-url:                "https://prohack17.github.io/chirach"
+baseurl:            "chirach"
+url:                "" 
 
 # Build settings
 markdown:           kramdown
