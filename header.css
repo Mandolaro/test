@@ -76,7 +76,7 @@ body{
 .navbar a .Logo{
     transform: translateX(60px);
 }
-.logo{
+.Logo{
     height: 13vh;
 }
 .navbar ul.PC_navbar li{
