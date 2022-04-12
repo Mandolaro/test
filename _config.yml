@@ -1,8 +1,8 @@
 title:              Blog
-email:              your-email@example.com
+email:              
 description:        Here are our posts
 author:             The itHelp Project
-baseurl:            "/chirach" #: khong can baseurl
+baseurl:            "/chirach" #repo name 
 url:                "https://prohack17.github.io/" #o url ke ca khi su dung repository khac thi cung khong can them vao: vd: repo prohack17/chirach thi url van la "https://prohack17.github.io"
 
 # Build settings
