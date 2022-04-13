@@ -1,8 +1,7 @@
 ---
 layout: defaultforpost
 ---
-<!--
-<link rel="stylesheet" href="../posts/index.css"> --> 
+
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
@@ -51,6 +50,8 @@ layout: defaultforpost
       </div>
     </div>
   </div>
+  
+<!-- Add thẳng code css vào đây vì khi sử dụng đường truyền, link sẽ bị hư : nếu link thì:<link rel="stylesheet" href="../posts/index.css"> -->
 
   <style>
     /*! Bootstrap v4.6.0 (https://getbootstrap.com/) Copyright 2011-2021 The Bootstrap Authors Copyright 2011-2021 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) */
