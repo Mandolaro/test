@@ -4,35 +4,6 @@
     src: url(../Assets/Fonts/Iciel.ttf);
 }
 
-@font-face {
-    font-family: Briko;
-    src: url(../Assets/Fonts/Briko.ttf);
-}
-
-@font-face {
-    font-family: SVN-Aleo;
-    src: url(../Assets/Fonts/SVN-Aleo.ttf);
-}
-
-@font-face {
-    font-family: Spectral;
-    src: url(../Assets/Fonts/Spectral.ttf);
-}
-
-@font-face {
-    font-family: NorthLand;
-    src: url(../Assets/Fonts/NorthLand.ttf);
-}
-
-@font-face {
-    font-family: Aquus;
-    src: url(../Assets/Fonts/Aquus.ttf);
-}
-
-@font-face {
-    font-family: JaneAust;
-    src: url(../Assets/Fonts/JaneAust.ttf);
-}
 *{
     margin: 0;
     padding: 0;
@@ -51,10 +22,9 @@ body{
 
 /* Navbar */
 .navbar{
-    background-color: rgb(124,119,113);
     position: absolute;
     width: 100vw;
-    height: 40px;
+    height: 100px;
     margin: auto;
     padding: 35px 0px;
     display: flex;
@@ -67,7 +37,7 @@ body{
 .black{
     background-color: rgb(41, 40, 40);
     width: 100vw;
-    height: 40px;
+    height: 100px;
 
     animation: Navbar_Transition 0.6s ease-in-out;
 }
@@ -79,6 +49,7 @@ body{
 }
 .Logo{
     height: 13vh;
+    z-index: 5;
 }
 .navbar ul.PC_navbar li{
     list-style: none;
@@ -90,7 +61,7 @@ body{
     font-family: Iciel;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(239, 231, 231);
+    color: rgb(41, 40, 40);
 }
 .black ul.PC_navbar li a{
     color: white;
@@ -168,22 +139,21 @@ ul.PC_navbar{
 .burger_menu{
     position: absolute;
     width: 100vw;
-    display: block;
     background-color: transparent;
 
     /* Chỉnh dựa trên height của .Logo với 1/2 height của burger_menu */
-    transform: translateX(0) translateY(120px);
+    transform: translateX(0) translateY(150px);
     transition: all ease-in-out .5s;
 }
 
-.burger_menu ul.mobile_navbar li{
+.burger_menu ul.mobile_navbar a li{
     text-align: center;
     list-style: none;
-    display: block;
+    display: none;
     padding: 10px;
 }
 
-.burger_menu ul.mobile_navbar li a{
+.burger_menu ul.mobile_navbar a{
     font-family: Iciel;
     text-decoration: none;
     text-transform: uppercase;
@@ -192,17 +162,19 @@ ul.PC_navbar{
 }
 
 .burger_menu.open{
+    display: block;
     background-color: rgb(41, 40, 40);
-    transform: translateY(110px);
+    transform: translateY(130px);
     transition: all 0.5s ease-in-out;
 }
 
-.burger_menu.open ul.mobile_navbar li a{
+.burger_menu.open ul.mobile_navbar a li{
     color: white;
     transition: all 0.15s ease-in-out;
+    display: block;
 }
 
-.burger_menu.open ul.mobile_navbar li a:hover{
+.burger_menu.open ul.mobile_navbar a li:hover{
     color: rgb(164, 223, 250);
 }
 
@@ -210,11 +182,11 @@ ul.PC_navbar{
     0%{
         transform: translateY(40px);
         color: transparent;
-        height: 50px;
+        height: 130px;
     }
     100%{
         transform: translateY(0%);
-        height: 40px;
+        height: 100px;
     }
 }
 
@@ -264,6 +236,17 @@ ul.PC_navbar{
 
 /* Khi media nhỏ cỡ mobile */
   @media screen and (max-width: 800px) {
+    @keyframes Navbar_Transition {
+        0%{
+            transform: translateY(40px);
+            color: transparent;
+            height: 100px;
+        }
+        100%{
+            transform: translateY(0);
+            height: 80px;
+        }
+    }
     .navbar ul.PC_navbar li a, .navbar ul.PC_navbar li::after {
         display: none;
     }
@@ -274,10 +257,17 @@ ul.PC_navbar{
     }
     .navbar{
         background-color: rgb(41, 40, 40);
-        height: 1vh;
+        height: 80px;
         width: 100vw;
     }
+    .black a .Logo{
+        transform: translateX(0px);
+    }
+    .navbar a .Logo{
+        transform: translateX(0px);
+    }
   }
+
 </style>
 <script>
   const btncontainer = document.querySelector(".burger_container");
@@ -297,7 +287,7 @@ ul.PC_navbar{
   })
 </script>
 <div class="header-container">
-  <div class="navbar">
+  <div class="navbar black">
         <a href="../index.html"><img src="../Assets/Images/LogoTrans.png" alt="Logo" class="Logo"></a>
       
       <ul class="PC_navbar">
